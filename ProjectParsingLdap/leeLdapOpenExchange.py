@@ -14,8 +14,8 @@ listaOXMailDeliveryAddress=list()
 listaModifyTimestamp=list()
 #Crea contador de usuarios
 contador=1
-## lee archivo
-fhand = open('K:\My Drive\Ibermatica\masmovil\Fase2\cuentasT_OX.csv') 
+## lee archivo ldap exportado de openxchange
+fhand = open('K:\cuentasOpenXchange.csv') 
 #print(fhand)
 ##funciones
 def AsignaValorValirable(stripped_line,contador):
@@ -64,5 +64,5 @@ dict={
 df=pd.DataFrame(dict)
 listColumnas=list(df.columns)
 #print(df)
-df.to_csv(r'K:\My Drive\Ibermatica\masmovil\Fase2\JIRA 393\usuariosOpenXchange.csv', 
+df.to_csv(r'K:\usuariosOpenXchange.csv', 
           header=listColumnas)

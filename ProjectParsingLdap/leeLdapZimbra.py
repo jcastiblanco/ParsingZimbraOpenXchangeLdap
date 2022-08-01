@@ -15,7 +15,7 @@ listaZimbraLastLogonTimestamp=list()
 #Crea contador de usuarios
 contador=1
 ## lee archivo
-fhand = open('K:\My Drive\Ibermatica\masmovil\Fase2\JIRA 393\cuentasOO_2807.csv') 
+fhand = open('K:\cuentasZimbra8.csv') 
 #print(fhand)
 ##funciones
 def AsignaValorValirable(stripped_line,contador):
@@ -62,7 +62,7 @@ dict={
     'uid':listaUid,
     'zimbraLastLogonTimestamp':listaZimbraLastLogonTimestamp}
 df=pd.DataFrame(dict)
-listColumans=list(df.columns)
+listColumnas=list(df.columns)
 #print(df)
-df.to_csv(r'K:\My Drive\Ibermatica\masmovil\Fase2\JIRA 393\usuariosZimbra.csv', 
-          header=listColumans)
+df.to_csv(r'K:\usuariosZimbra8formateados.csv', 
+          header=listColumnas)
